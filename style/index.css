@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*,::before,::after
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.primary-button
+{
+    background: #303043;
+    border-radius: 50px;
+    max-width: 250px;
+    width: 100%;
+    padding: 1vh 2vh;
+    color: #fff !important;
+}
+
+.container
+{
+    max-width: 1400px;
+    width: calc(100vw - 6em);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.topnav
+{
+    background: #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.topnav .logo
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-right: auto;
+    color: #FF6D1B;
+    font-size: 1.3rem;
+}
+
+.topnav .align-right
+{
+    margin-left: auto;
+}
+
+.topnav a,.topnav .align-right a
+{
+    padding: 0.5em 1.5em;
+}
+
+.topnav a
+{
+    color: rgba(22, 22, 22, 0.6);
+}
+
+.topnav .login
+{
+    color: #FF6D1B;
+    font-weight: bold;
+}
+
+#active
+{
+    color: black;
+}
+
+.display-nav
+{
+    z-index: 100;
+    background-color: red !important;
+    display: flex;   
+    flex-flow: column;
+    align-content: center;
+    justify-items: center; 
+}
+
+
+@media screen and ( max-width: 1024px )
+{
+    .topnav .container
+    {
+        flex-flow: column;        
+    }
+
+    .topnav .container a:not(:first-child),.topnav .container .align-right a
+    {
+        display: none;
+    }
+
+    .topnav .align-right,.topnav .logo
+    {
+        margin: 0;
+    }
+}
