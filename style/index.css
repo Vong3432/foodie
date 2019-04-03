@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 *,::before,::after
 {
@@ -8,35 +8,59 @@
     font-size: 18px;
 }
 
+:root
+{
+    --primary-color:#FF6D1B;
+    --secondary-color:#303043;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Montserrat', sans-serif;    
+    /* font-weight: bold;     */
+    font-weight: 800 !important;
+}
+
 a
 {
     color: black;
     text-decoration: none;
 }
 
-.primary-button
+.secondary-button
 {
-    background: #303043;
+    background: var(--secondary-color);
     border-radius: 50px;
-    max-width: 250px;
+    max-width: 150px;
     width: 100%;
     padding: 1vh 2vh;
     color: #fff !important;
+    border: none;
+    outline: none;    
+}
+
+.secondary-button:hover
+{
+    opacity: 0.8;
+    transition: opacity 300ms ease-in-out;
+    cursor: pointer;
 }
 
 .container
 {
-    max-width: 1400px;
-    width: calc(100vw - 6em);
+    max-width: 1200px;    
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    justify-content: center;
+    justify-items: center;
     margin: 0 auto;
-    padding: 1em;
+    padding: 1em;    
 }
 
 .topnav
 {
+    z-index: 99;
     background: #FFFFFF;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
@@ -44,9 +68,9 @@ a
 .topnav .logo
 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-weight: 800;
     margin-right: auto;
-    color: #FF6D1B;
+    color: var(--primary-color);
     font-size: 1.3rem;
 }
 
@@ -67,7 +91,7 @@ a
 
 .topnav .login
 {
-    color: #FF6D1B;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -76,15 +100,46 @@ a
     color: black;
 }
 
-.display-nav
+.hero-section
 {
-    z-index: 100;
-    background-color: red !important;
-    display: flex;   
-    flex-flow: column;
-    align-content: center;
-    justify-items: center; 
+    padding: 2em 0;
+    display: flex;
+    flex-flow: column;    
+    justify-content: center;
+    position: relative;
+    min-height: 50vh;    
+    background: url(../images/deva-darshan-582315-unsplash.jpg) center;
+    background-color: rgba(255, 255, 255, .9);
+    background-blend-mode: screen;
+    background-size: cover;
+    height: auto;    
+    width: 100%;
+    z-index: -1;    
 }
+
+.hero__content
+{            
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero__content h1
+{        
+    color: var(--primary-color);
+    font-size: 4rem;
+}
+
+.hero__content p
+{    
+    margin: 1em 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.hero__content button
+{
+    margin-top: 1em;
+}
+
 
 
 @media screen and ( max-width: 1024px )
@@ -92,6 +147,11 @@ a
     .topnav .container
     {
         flex-flow: column;        
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        /* background-color: red; */
     }
 
     .topnav .container a:not(:first-child),.topnav .container .align-right a
@@ -101,6 +161,6 @@ a
 
     .topnav .align-right,.topnav .logo
     {
-        margin: 0;
+        margin: 0 auto;
     }
 }
