@@ -6,12 +6,14 @@
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
+    box-sizing: border-box;
 }
 
 :root
 {
     --primary-color:#FF6D1B;
     --secondary-color:#303043;
+    --text-white:#fff;
 }
 
 h1,h2,h3,h4,h5,h6
@@ -27,28 +29,53 @@ a
     text-decoration: none;
 }
 
+.card
+{
+    background: #fff;
+    max-width: 400px;
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 3em;
+}
+
+.card--description
+{
+    padding: 1.5em 0;
+}
+
+.card--image
+{        
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 .flex-row-reverse
 {
     flex-flow: row-reverse wrap;
-    min-height: inherit;
+    
 }
 
 .flex-column-reverse
 {
-    flex-flow: column-reverse wrap;
-    min-height: inherit;
+    flex-flow: column-reverse wrap;    
 }
 
 .flex-row
 {
-    flex-flow: row wrap;
-    min-height: inherit;
+    flex-flow: row wrap;    
 }
 
 .flex-column
 {
-    flex-flow: column wrap;
-    min-height: inherit;
+    flex-flow: column wrap;    
 }
 
 .col-12
@@ -159,13 +186,27 @@ a
     border-radius: 50px;
     max-width: 150px;
     width: 100%;
-    padding: 1vh 2vh;
+    padding: 1.5vh 2vh;
     color: #fff !important;
     border: none;
     outline: none;    
+    font-weight: bold;
 }
 
-.secondary-button:hover, a:hover
+.third-button
+{
+    background: #fff;
+    border-radius: 50px;
+    max-width: 150px;
+    width: 100%;
+    padding: 1.5vh 2vh;
+    font-weight: bold;    
+    color: #FF6D1B !important;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;  
+}
+
+.secondary-button:hover,.third-button:hover, a:hover
 {
     /* color: var(--primary-color) !important; */
     opacity: 0.7;
@@ -178,8 +219,9 @@ a
     max-width: 1200px;    
     display: flex;   
     margin: 0 auto;
-    padding: 1em;    
+    padding: 1em 1.5em;    
     flex: 1;
+    min-height: inherit;
 }
 
 
@@ -246,13 +288,13 @@ a
     height: inherit;
 }
 
-.hero-section,.intro-section
+.hero-section,.intro-section,.member-section,.describe-section
 {
     padding: 2em 0;    
     position: relative;
     min-height: 50vh;        
     height: 100%;    
-    width: 100%;       
+    width: 100%;        
 }
 
 .hero-section .container
@@ -260,19 +302,20 @@ a
     align-items: center;    
     justify-content: center;    
     text-align: center;    
+    min-height: 50vh;
 }
 
 .header
 {        
     color: var(--primary-color);
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .paragraph
 {        
     line-height: 1.6;    
     margin: 1em 0;
-    font-size: 1.3rem;    
+    font-size: 1.1rem;    
     color: var(--secondary-color);
 }
 
@@ -283,12 +326,13 @@ a
 
 .intro-section .container
 {    
+    min-height: initial;
     align-items: center;
 }
 
 .intro-section .intro__content
 {
-    padding: 1em 1.5em;
+    padding: 3em 0;
 }
 
 .intro__images
@@ -298,6 +342,51 @@ a
     width: 100%;
     height: 100%;
     object-fit: cover;    
+}
+
+.member-section::before
+{
+    content: '';
+    background: linear-gradient(96deg, #FF6D1B 0%, rgba(255, 64, 167, 0.99) 100%) center;            
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    min-height: 50vh;
+    width: 100%;
+    height: inherit;
+}
+
+.member-section
+{
+    text-align: center;    
+    padding: 5em 0;
+}
+
+.member-section .container
+{
+    align-content: center;    
+}
+
+.member-section .header,.member-section .paragraph
+{
+    color: var(--text-white);    
+}
+
+.member-section .paragraph
+{
+    padding: 25px 0;
+}
+
+.member-section .card
+{    
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+
+.member-section .secondary-button
+{
+    margin: 7px 0;
 }
 
 @media screen and ( max-width: 1024px )
