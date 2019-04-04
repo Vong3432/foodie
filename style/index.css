@@ -485,6 +485,12 @@ a
 
 @media screen and ( max-width:1280px )
 {
+    
+
+}
+
+@media screen and ( max-width: 1024px )
+{
     .community-section .container .col-3 .card
     {
         margin: 0 auto;
@@ -494,11 +500,6 @@ a
     {        
         text-align: center;
     }
-
-}
-
-@media screen and ( max-width: 1024px )
-{
 
     .header
     {
