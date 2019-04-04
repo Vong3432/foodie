@@ -311,12 +311,13 @@ a
 {        
     color: var(--primary-color);
     font-size: 3rem;
+    margin-top: 15px;
 }
 
 .paragraph
 {        
     line-height: 1.6;    
-    margin: 1.3em 0;
+    margin: 1.5em 0;
     font-size: 1.1rem;    
     color: var(--secondary-color);
 }
@@ -422,7 +423,7 @@ a
 .community-section .container
 {
     justify-items: center;
-    justify-content: center;
+    justify-content: center;        
     text-align: center;
 }
 
@@ -486,6 +487,19 @@ a
     margin: 7px 0;
 }
 
+@media screen and ( max-width:1280px )
+{
+    .community-section .container .col-3 .card
+    {
+        margin: 0 auto;
+    }
+
+    .header,.paragraph
+    {        
+        text-align: center;
+    }
+
+}
 
 @media screen and ( max-width: 1024px )
 {
@@ -528,8 +542,5 @@ a
 
 @media screen and ( max-width: 600px )
 {
-    .community-section .container .col-3
-    {
-        margin: 15px 0;
-    }
+
 }
