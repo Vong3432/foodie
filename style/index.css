@@ -186,7 +186,7 @@ a
     border-radius: 50px;
     max-width: 150px;
     width: 100%;
-    padding: 1.5vh 2vh;
+    padding: .7em 1em;    
     color: #fff !important;
     border: none;
     outline: none;    
@@ -199,7 +199,7 @@ a
     border-radius: 50px;
     max-width: 150px;
     width: 100%;
-    padding: 1.5vh 2vh;
+    padding: .7em 1em;   
     font-weight: bold;    
     color: #FF6D1B !important;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -330,7 +330,7 @@ a
     align-items: center;
 }
 
-.intro-section .intro__content
+.intro-section .content
 {
     padding: 3em 0;
 }
@@ -387,6 +387,22 @@ a
 .member-section .secondary-button
 {
     margin: 7px 0;
+}
+
+.describe-section .container
+{
+    min-height: initial;    
+    align-items: center;
+    align-content: center;
+}
+
+.describe__image
+{
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and ( max-width: 1024px )
