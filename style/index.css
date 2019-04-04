@@ -188,7 +188,7 @@ a
     border-radius: 50px;
     max-width: 150px;
     width: 100%;
-    padding: .7em 1em;    
+    padding: 1.3vh 1.5vh;    
     color: #fff !important;
     border: none;
     outline: none;    
@@ -201,7 +201,7 @@ a
     border-radius: 50px;
     max-width: 150px;
     width: 100%;
-    padding: .7em 1em;   
+    padding: 1.3vh 1.5vh;    
     font-weight: bold;    
     color: #FF6D1B !important;
     border: 1px solid rgba(0, 0, 0, 0.5);
