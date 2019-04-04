@@ -528,6 +528,8 @@ a
 
 @media screen and ( max-width: 600px )
 {
-
-
+    .community-section .container .col-3
+    {
+        margin: 15px 0;
+    }
 }
